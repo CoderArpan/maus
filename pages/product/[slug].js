@@ -14,7 +14,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const ProductDetails = ({ product, products }) => {
     const [selectedSize, setSelectedSize] = useState();
-    const [showError, setShowError] = useState(false);
+    const [showError, setShowError] = useState(true);
     const dispatch = useDispatch();
     const p = product?.data?.[0]?.attributes;
 
@@ -127,6 +127,7 @@ const ProductDetails = ({ product, products }) => {
                             {showError && (
                                 <div className="text-red-600 mt-1">
                                     Size selection is required
+                                    Note:- Please remember Your Product size and name may be required
                                 </div>
                             )}
                             {/* SHOW ERROR END */}
